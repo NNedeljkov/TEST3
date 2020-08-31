@@ -23,9 +23,12 @@ export const shipInfo = (ship) => {
 
     const div4 = document.createElement('div')
     const shipImg = document.createElement('img')
+    const shipA = document.createElement('a')
+    shipA.href = ship.url
     shipImg.src = ship.image
-    shipImg.href = ship.url
-    div4.appendChild(shipImg)
+    // shipImg.href = ship.url
+    shipA.appendChild(shipImg)
+    div4.appendChild(shipA)
 
     shipContainer.append( div1, div2, div3, div4 )
     return shipContainer
